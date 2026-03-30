@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card'
-import { ChevronDown, FileText, Check, CreditCard, Send } from 'lucide-react'
+import { ChevronDown, Check } from 'lucide-react'
 
 export default function RecordPayment() {
   return (

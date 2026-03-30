@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Card } from '@/components/ui/card'
-import { Trash2, ChevronDown, Check, CreditCard, Send, FileText } from 'lucide-react'
+import { Trash2, ChevronDown, Check, FileText } from 'lucide-react'
 
 export default function CreateInvoice() {
-  const [items, setItems] = useState([{ desc: 'Website Development', qty: 1, rate: 3500 }])
+  const [items] = useState([{ desc: 'Website Development', qty: 1, rate: 3500 }])
 
   const subtotal = items.reduce((acc, item) => acc + item.qty * item.rate, 0)
   const vat = subtotal * 0.05

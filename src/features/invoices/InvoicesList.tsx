@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { useStore } from '@/store/useStore'
-import { MoreHorizontal, FileText, Edit2 } from 'lucide-react'
+import { FileText, Edit2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function InvoicesList() {

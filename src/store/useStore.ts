@@ -45,7 +45,7 @@ export const useStore = create<StoreState>()(
   persist(
     (set) => ({
       clients: mockClients, // Initialize with mock data
-      invoices: mockInvoices,
+      invoices: mockInvoices as Invoice[],
       payments: [
         { id: '1', client: 'Acme Corporation', invoiceRef: 'INV-2026-0042', amount: 4500.00, method: 'Bank Transfer', date: 'Mar 28, 2026', status: 'completed' },
         { id: '2', client: 'TechStart Inc', invoiceRef: 'INV-2026-0040', amount: 3200.00, method: 'Credit Card', date: 'Mar 27, 2026', status: 'completed' }
