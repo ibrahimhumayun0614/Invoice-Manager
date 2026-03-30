@@ -5,7 +5,7 @@ import { Trash2, ChevronDown, Check, FileText } from 'lucide-react'
 export default function CreateInvoice() {
   const [items] = useState([{ desc: 'Website Development', qty: 1, rate: 3500 }])
 
-  const subtotal = items.reduce((acc, item) => acc + item.qty * item.rate, 0)
+  const subtotal = items.reduce((acc: number, item: { desc: string, qty: number, rate: number }) => acc + item.qty * item.rate, 0)
   const vat = subtotal * 0.05
   const total = subtotal + vat
 
@@ -58,7 +58,7 @@ export default function CreateInvoice() {
                 </tr>
               </thead>
               <tbody>
-                {items.map((item, i) => (
+                {items.map((item: { desc: string, qty: number, rate: number }, i: number) => (
                   <tr key={i}>
                     <td className="py-2"><input className="w-full border border-gray-200 rounded-md px-2.5 py-1.5 text-[13px]" defaultValue={item.desc} /></td>
                     <td className="py-2 pl-2"><input className="w-16 border border-gray-200 rounded-md px-2.5 py-1.5 text-[13px] text-right ml-auto" defaultValue={item.qty} /></td>

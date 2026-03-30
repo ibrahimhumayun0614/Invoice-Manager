@@ -5,7 +5,7 @@ import { FileText, Edit2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function InvoicesList() {
-  const invoices = useStore(state => state.invoices)
+  const invoices = useStore((state: any) => state.invoices)
   return (
     <Card className="rounded-xl overflow-hidden shadow-sm">
       <div className="flex items-center gap-2.5 px-5 py-3.5 border-b border-gray-100 bg-white">
@@ -37,7 +37,7 @@ export default function InvoicesList() {
             </tr>
           </thead>
           <tbody>
-            {invoices.map((inv) => (
+            {invoices.map((inv: any) => (
               <tr key={inv.id} className="hover:bg-gray-50/50 group border-b border-gray-50 last:border-0">
                 <td className="px-4 py-3 relative">
                   <div className="font-medium text-[13px] text-gray-900">{inv.id}</div>
